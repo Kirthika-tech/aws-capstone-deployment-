@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head><title>✅ Confirmation</title></head>
+<body style="font-family:Arial;background:#e8f5e8;padding:50px;">
+<div style="max-width:800px;margin:0 auto;background:white;padding:30px;border-radius:20px;box-shadow:0 10px 30px rgba(0,0,0,0.1);">
+<h1 style="color:#2e7d32;">✅ Blood Request Confirmed</h1>
+
+<!-- TOUCH TO READ CONTENT -->
+<div style="background:#f1f8e9;padding:20px;border-radius:15px;cursor:pointer;margin:20px 0;" onclick="showDetails()">
+  <h3>🩸 Request #BB-247 <span style="float:right;">O-Negative | 3 Units</span></h3>
+  <p><strong>Patient:</strong> Anjali R. | <strong>Hospital:</strong> Apollo Hospital | <strong>Status:</strong> ✅ DELIVERED</p>
+</div>
+
+<div id="modal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.8);z-index:1000;">
+  <div style="background:white;margin:100px auto;width:90%;max-width:600px;padding:30px;border-radius:15px;">
+    <h2 style="color:#2e7d32;">📋 Confirmation Details</h2>
+    <p><strong>Request ID:</strong> BB-247</p>
+    <p><strong>Patient:</strong> Anjali R. (Age: 28)</p>
+    <p><strong>Blood Type:</strong> O-Negative</p>
+    <p><strong>Units:</strong> 3</p>
+    <p><strong>Hospital:</strong> Apollo Hospital, Chennai</p>
+    <p><strong>Doctor:</strong> Dr. Ravi Kumar</p>
+    <p><strong>Delivered:</strong> 20 Jan 2026, 14:30 IST</p>
+    <p><strong>Status:</strong> <span style="color:green;font-weight:bold;">SUCCESS</span></p>
+    <button onclick="closeModal()" style="background:#4caf50;color:white;padding:10px 20px;border:none;border-radius:8px;">Close</button>
+  </div>
+</div>
+
+<a href="/" style="background:#4caf50;color:white;padding:15px 30px;text-decoration:none;border-radius:10px;">← Dashboard</a>
+</div>
+
+<script>
+function showDetails() { document.getElementById('modal').style.display='block'; }
+function closeModal() { document.getElementById('modal').style.display='none'; }
+</script>
+</body>
+</html>
+

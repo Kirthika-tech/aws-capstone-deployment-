@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>🩸 Blood Bridge - Doctor Signup</title>
+    <style>
+        body { 
+            font-family: Arial; 
+            background: linear-gradient(135deg, #d32f2f, #b71c1c);
+            height: 100vh; display: flex; align-items: center; justify-content: center;
+            margin: 0;
+        }
+        .signup-box {
+            background: white; padding: 40px; border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.3); width: 100%; max-width: 400px;
+        }
+        h2 { color: #d32f2f; text-align: center; margin-bottom: 30px; }
+        input[type="text"], input[type="password"] {
+            width: 100%; padding: 15px; margin: 10px 0; border: 2px solid #ddd;
+            border-radius: 10px; font-size: 16px; box-sizing: border-box;
+        }
+        input[type="submit"] {
+            width: 100%; background: #d32f2f; color: white; padding: 15px;
+            border: none; border-radius: 10px; font-size: 18px; cursor: pointer;
+        }
+        input[type="submit"]:hover { background: #b71c1c; }
+        .flash { padding: 10px; margin: 10px 0; border-radius: 5px; text-align: center; }
+        .success { background: #d4edda; color: #155724; }
+        .error { background: #f8d7da; color: #721c24; }
+        .link { text-align: center; margin-top: 20px; }
+        .link a { color: #d32f2f; text-decoration: none; }
+    </style>
+</head>
+<body>
+    <div class="signup-box">
+        <h2>🩸 Blood Bridge Hospital</h2>
+        <h3>New Doctor Registration</h3>
+        
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="flash {{ category }}">{{ message }}</div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        
+        <form method="POST">
+            <input type="text" name="username" placeholder="Doctor Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="submit" value="CREATE ACCOUNT 🩺">
+        </form>
+        
+        <div class="link">
+            <p>Already have account? <a href="/login">Login here</a></p>
+            <p><strong>Quick login: blood / bridge</strong></p>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+

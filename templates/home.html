@@ -1,0 +1,52 @@
+from flask import Flask, render_template, request, redirect, url_for, session, flash
+app = Flask(__name__)
+app.secret_key = 'blood-bridge-2026'
+
+# Login: blood / bridge
+users = {'blood': 'bridge'}
+
+def is_logged_in():
+    return 'username' in session
+
+@app.route('/')
+def index():
+    return render_template('index.html', username=session.get('username'))
+
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    if request.method == 'POST':
+        username = request.form['username']
+        password = request.form['password']
+        
+        if username == 'blood' and password == 'bridge':
+            session['username'] = username
+            flash('Login successful! Welcome!', 'success')
+            return redirect(url_for('index'))  # ← GOES TO HOMEPAGE
+        else:
+            flash('Wrong! Use: blood / bridge', 'error')
+    
+    return render_template('login.html')
+
+@app.route('/signup', methods=['GET', 'POST'])
+def signup():
+    if request.method == 'POST':
+        username = request.form['username']
+        users[username] = request.form['password']
+        flash('Account created!', 'success')
+        return redirect(url_for('login'))
+    
+    return render_template('signup.html')
+
+@app.route('/logout')
+def logout():
+    session.clear()
+    flash('Logged out!', 'success')
+    return redirect(url_for('index'))
+
+if __name__ == '__main__':
+    app.run(debug=True)
+
+
+
+
+

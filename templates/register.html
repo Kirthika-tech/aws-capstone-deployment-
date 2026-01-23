@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>👥 Donor Register - Dr. {{ username|upper }}</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            background: linear-gradient(135deg, #f3e5f5, #e1bee7);
+            padding: 40px; min-height: 100vh;
+        }
+        .container {
+            max-width: 900px; margin: 0 auto;
+            background: white; padding: 40px;
+            border-radius: 20px; box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        }
+        h1 { 
+            color: #7b1fa2; text-align: center; 
+            font-size: 2.5em; margin-bottom: 30px;
+        }
+        .header {
+            background: linear-gradient(45deg, #9c27b0, #7b1fa2);
+            color: white; padding: 20px; 
+            border-radius: 15px; margin-bottom: 30px;
+            text-align: center;
+        }
+        .donor-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px; margin: 30px 0;
+        }
+        .donor-card {
+            background: #f8f5ff; padding: 25px;
+            border-radius: 15px; border-left: 5px solid #9c27b0;
+            transition: all 0.3s; cursor: pointer;
+        }
+        .donor-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(156,39,176,0.2);
+        }
+        .donor-name { color: #7b1fa2; font-size: 1.4em; font-weight: bold; }
+        .status { 
+            padding: 6px 12px; border-radius: 20px; font-size: 0.85em;
+            font-weight: bold; float: right;
+        }
+        .status-green { background: #e8f5e8; color: #2e7d32; }
+        .status-orange { background: #fff3e0; color: #f57c00; }
+        .btn {
+            background: linear-gradient(45deg, #9c27b0, #7b1fa2);
+            color: white; padding: 15px 30px; 
+            text-decoration: none; border-radius: 25px;
+            display: inline-block; font-weight: 600;
+            margin: 10px; box-shadow: 0 5px 15px rgba(156,39,176,0.3);
+        }
+        .btn:hover { transform: translateY(-2px); }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- HEADER -->
+        <div class="header">
+            <h1>👥 DONOR REGISTRATION</h1>
+            <p>Dr. {{ username|upper }} - Blood Bridge Hospital 🩸</p>
+        </div>
+
+        <!-- DONOR CARDS - TOUCHABLE -->
+        <div class="donor-grid">
+            <div class="donor-card">
+                <div class="status status-green">AVAILABLE</div>
+                <div class="donor-name">🩸 Rahul S. (DNR-123)</div>
+                <p><strong>O Positive</strong> | Age: 29 | 72kg</p>
+                <p>Chennai Central | +91 98765 43210<br>
+                Last Donation: Dec 15, 2025</p>
+            </div>
+
+            <div class="donor-card">
+                <div class="status status-green">AVAILABLE</div>
+                <div class="donor-name">🩸 Priya K. (DNR-456)</div>
+                <p><strong>O Positive</strong> | Age: 26</p>
+                <p>Chennai | +91 87654 32109<br>
+                Phone Verified ✅</p>
+            </div>
+
+            <div class="donor-card">
+                <div class="status status-orange">PENDING</div>
+                <div class="donor-name">🩸 Vikram M. (DNR-789)</div>
+                <p><strong>B Positive</strong> | Age: 34</p>
+                <p>Medical Test Required<br>
+                Contacted Today</p>
+            </div>
+        </div>
+
+        <!-- ACTION BUTTONS -->
+        <div style="text-align: center; margin: 40px 0;">
+            <a href="/dashboard" class="btn">🏥 Dashboard</a>
+            <a href="/confirmation" class="btn">✅ Confirmations</a>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+

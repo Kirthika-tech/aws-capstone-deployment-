@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head><title>📋 Respond</title></head>
+<body style="font-family:Arial;background:#fff3e0;padding:50px;">
+<div style="max-width:800px;margin:0 auto;background:white;padding:30px;border-radius:20px;box-shadow:0 10px 30px rgba(0,0,0,0.1);">
+<h1 style="color:#f57c00;">📋 Emergency Response</h1>
+
+<!-- TOUCHABLE RESPONSE LIST -->
+<div style="background:#fff8e1;padding:20px;border-radius:15px;cursor:pointer;margin:20px 0;" onclick="showDetails()">
+  <h3>⚡ Alert #ALRT-456 <span style="float:right;">B+ | URGENT</span></h3>
+  <p>Fortis Hospital - Maternity emergency | Donor needed NOW</p>
+</div>
+
+<div id="modal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.8);">
+  <div style="background:white;margin:100px auto;width:90%;max-width:500px;padding:30px;border-radius:15px;">
+    <h2 style="color:#f57c00;">🚨 Response Required</h2>
+    <p><strong>Alert ID:</strong> ALRT-456</p>
+    <p><strong>Hospital:</strong> Fortis Hospital</p>
+    <p><strong>Blood Type:</strong> B Positive</p>
+    <p><strong>Patient:</strong> Priya K. (Maternity)</p>
+    <p><strong>Distance:</strong> 8.2 km</p>
+    <p><strong>Response Time:</strong> <span style="color:red;">15 mins left</span></p>
+    <button onclick="closeModal()" style="background:#ff9800;color:white;padding:10px 20px;border:none;border-radius:8px;">Close</button>
+  </div>
+</div>
+
+<a href="/" style="background:#ff9800;color:white;padding:15px 30px;text-decoration:none;border-radius:10px;">← Dashboard</a>
+</div>
+
+<script>
+function showDetails() { document.getElementById('modal').style.display='block'; }
+function closeModal() { document.getElementById('modal').style.display='none'; }
+</script>
+</body>
+</html>
+
+
+

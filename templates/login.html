@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blood Bridge 🩸</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: Arial; 
+            background: linear-gradient(135deg, #d32f2f, #b71c1c, #7b1fa2);
+            height: 100vh; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center;
+        }
+        .login-container {
+            background: white; 
+            padding: 40px; 
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            width: 100%; 
+            max-width: 400px;
+            text-align: center;
+        }
+        .logo { 
+            font-size: 2.5em; 
+            color: #d32f2f; 
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        h2 { 
+            color: #d32f2f; 
+            margin-bottom: 20px;
+            font-size: 1.4em;
+        }
+        .subtitle { 
+            color: #666; 
+            margin-bottom: 30px;
+        }
+        input {
+            width: 100%; 
+            padding: 15px; 
+            margin: 15px 0; 
+            border: 2px solid #ddd; 
+            border-radius: 10px;
+            font-size: 16px;
+        }
+        input:focus {
+            border-color: #d32f2f; 
+            outline: none;
+        }
+        .login-btn {
+            width: 100%; 
+            background: #d32f2f; 
+            color: white; 
+            padding: 18px; 
+            border: none; 
+            border-radius: 10px;
+            font-size: 16px; 
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .login-btn:hover {
+            background: #b71c1c;
+        }
+        .flash {
+            padding: 12px; 
+            margin: 15px 0; 
+            border-radius: 8px;
+        }
+        .flash.success { 
+            background: #d4edda; 
+            color: #155724; 
+        }
+        .flash.error { 
+            background: #f8d7da; 
+            color: #721c24; 
+        }
+        .default-creds {
+            background: #ffebee; 
+            padding: 12px; 
+            border-radius: 8px;
+            margin-top: 20px;
+            border-left: 4px solid #d32f2f;
+        }
+        .signup-link {
+            margin-top: 20px; 
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+        }
+        .signup-link a {
+            color: #d32f2f; 
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <!-- HEADER -->
+        <div class="logo">🩸 BLOOD BRIDGE</div>
+        <h2>Blood Bridge Management System</h2>
+        <p class="subtitle">Doctor Login Portal</p>
+
+        <!-- FLASH MESSAGES -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="flash {{ category }}">{{ message }}</div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        <!-- LOGIN FORM -->
+        <form method="POST">
+            <input type="text" name="username" placeholder="Doctor Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button type="submit" class="login-btn">🚨 ACCESS SYSTEM</button>
+        </form>
+
+        <!-- DEFAULT CREDENTIALS -->
+        <div class="default-creds">
+            <strong>Quick Access:</strong> blood / bridge
+        </div>
+
+        <!-- SIGNUP LINK -->
+        <div class="signup-link">
+            <p>New Doctor? <a href="/signup">Create Account</a></p>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
