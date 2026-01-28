@@ -1,5 +1,5 @@
 
-                                                  Blood Bridge: optimizing Lifesaving resources using AWS Services
+                                                 **Blood Bridge: optimizing Lifesaving resources using AWS Services**
 🔴 1. index.html – Landing Page (Home)
 
 What you see:
@@ -200,7 +200,7 @@ Buttons:
 ✅ Confirmations
 
 
-APP.PY
+**APP.PY**
 
 🏠 First Screen (Home)
 You see:
@@ -315,8 +315,8 @@ Takes you back to Home page
 Dashboard & other pages are no longer accessible
 
 
-PROJECT FLOW(AWS-app.py)
-
+**PROJECT FLOW(AWS-app.py)
+**
 🔐 LOGIN SYSTEM (Session)
 User Login
    │
