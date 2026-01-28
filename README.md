@@ -1,5 +1,5 @@
 
-                                                 **Blood Bridge: optimizing Lifesaving resources using AWS Services**
+ **Blood Bridge: optimizing Lifesaving resources using AWS Services**
 🔴 1. index.html – Landing Page (Home)
 
 What you see:
