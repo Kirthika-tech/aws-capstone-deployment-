@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Registration Success</title>
+
+<style>
+body{
+font-family:Arial;
+background:#e8f5e9;
+padding:50px;
+text-align:center;
+}
+
+.box{
+max-width:600px;
+margin:auto;
+background:white;
+padding:40px;
+border-radius:15px;
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+h1{color:#2e7d32;}
+
+.btn{
+display:inline-block;
+margin-top:30px;
+padding:15px 30px;
+background:#d32f2f;
+color:white;
+text-decoration:none;
+border-radius:8px;
+font-size:18px;
+}
+
+.btn:hover{
+background:#b71c1c;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+
+<h1>✅ Donor Registered Successfully</h1>
+
+<h2>{{ name }}</h2>
+
+<p><strong>Blood Group:</strong> {{ blood_group }}</p>
+
+<h3>🩸 Next Eligible Donation Date</h3>
+
+<h2 style="color:#d32f2f;">{{ next_donation }}</h2>
+
+<a href="/dashboard" class="btn">🏠 Go to Dashboard</a>
+
+</div>
+
+</body>
+</html>

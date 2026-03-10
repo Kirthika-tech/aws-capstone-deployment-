@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Success</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #e3f2fd, #ffffff);
+        }
+
+        .container {
+            width: 400px;
+            margin: 100px auto;
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        h2 {
+            color: #1565c0;
+            margin-bottom: 20px;
+        }
+
+        .message {
+            color: green;
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            margin-top: 10px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+
+        .dashboard-btn {
+            background-color: #1565c0;
+            color: white;
+        }
+
+        .dashboard-btn:hover {
+            background-color: #0d47a1;
+        }
+
+        .back-btn {
+            background-color: #f1f1f1;
+            color: #333;
+        }
+
+        .back-btn:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h2>Request Submitted</h2>
+
+    <div class="message">
+        Successfully Sent
+    </div>
+
+    <a href="/dashboard" class="btn dashboard-btn">Go to Dashboard</a>
+    <a href="/request" class="btn back-btn">Back to Request</a>
+
+</div>
+
+</body>
+</html>

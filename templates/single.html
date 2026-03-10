@@ -1,41 +1,214 @@
 <!DOCTYPE html>
 <html>
-<head><title>👤 Single Patient</title></head>
-<body style="font-family:Arial;background:#e1f5fe;padding:50px;">
-<div style="max-width:800px;margin:0 auto;background:white;padding:30px;border-radius:20px;box-shadow:0 10px 30px rgba(0,0,0,0.1);">
-<h1 style="color:#1976d2;">👤 Patient Profile</h1>
+<head>
+<title>Blood Donation Info</title>
 
-<!-- TOUCHABLE PATIENT INFO -->
-<div style="background:#e3f2fd;padding:25px;border-radius:15px;cursor:pointer;margin:20px 0;border-left:5px solid #2196f3;" onclick="showFullDetails()">
-  <h2>🩸 Anjali R. <span style="float:right;color:#d32f2f;">CRITICAL</span></h2>
-  <p><strong>Blood Type:</strong> O- | <strong>Units Needed:</strong> 3 | <strong>Status:</strong> Emergency</p>
+<style>
+
+body{
+font-family:Arial, sans-serif;
+margin:0;
+background:linear-gradient(135deg,#ff1a1a,#660000);
+min-height:100vh;
+}
+
+/* Container */
+
+.container{
+width:80%;
+margin:auto;
+padding:50px 20px;
+}
+
+/* Title */
+
+h1{
+text-align:center;
+color:white;
+margin-bottom:40px;
+font-size:40px;
+letter-spacing:1px;
+}
+
+/* Cards */
+
+.card{
+background:white;
+padding:30px;
+margin-top:30px;
+border-radius:18px;
+box-shadow:0 15px 35px rgba(0,0,0,0.4);
+transition:all 0.3s ease;
+}
+
+.card:hover{
+transform:translateY(-8px) scale(1.01);
+}
+
+/* Headings */
+
+.card h2{
+color:#b30000;
+margin-bottom:10px;
+}
+
+/* Paragraph */
+
+.card p{
+line-height:1.7;
+color:#444;
+}
+
+/* Table */
+
+table{
+width:100%;
+border-collapse:collapse;
+margin-top:20px;
+border-radius:10px;
+overflow:hidden;
+}
+
+table, th, td{
+border:1px solid #eee;
+}
+
+th, td{
+padding:12px;
+text-align:center;
+}
+
+th{
+background:linear-gradient(to right,#ff1a1a,#990000);
+color:white;
+font-size:16px;
+}
+
+tr:nth-child(even){
+background:#fff5f5;
+}
+
+/* Lists */
+
+ul{
+line-height:1.9;
+padding-left:20px;
+}
+
+/* Button */
+
+.btn{
+display:inline-block;
+margin-top:35px;
+padding:13px 28px;
+background:linear-gradient(135deg,#ff1a1a,#990000);
+color:white;
+text-decoration:none;
+border-radius:12px;
+font-weight:bold;
+font-size:16px;
+transition:all 0.3s ease;
+}
+
+.btn:hover{
+transform:scale(1.08);
+box-shadow:0 6px 18px rgba(0,0,0,0.4);
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🩸 Blood Donation Awareness</h1>
+
+<div class="card">
+
+<h2>Why Blood Donation is Important</h2>
+
+<p>
+Blood donation saves lives. Hospitals require blood for surgeries,
+accident victims, cancer patients, and many emergency treatments.
+A single donation can help up to three patients.
+</p>
+
 </div>
 
-<div id="modal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.8);">
-  <div style="background:white;margin:50px auto;width:90%;max-width:600px;padding:30px;border-radius:15px;">
-    <h2 style="color:#1976d2;">📋 Anjali R. - Patient Details</h2>
-    <table style="width:100%;border-collapse:collapse;margin:20px 0;">
-      <tr><td style="padding:10px;"><strong>Patient ID:</strong></td><td>PT-789</td></tr>
-      <tr><td style="padding:10px;"><strong>Age:</strong></td><td>28 years</td></tr>
-      <tr><td style="padding:10px;"><strong>Blood Type:</strong></td><td>O Negative 🩸</td></tr>
-      <tr><td style="padding:10px;"><strong>Condition:</strong></td><td>Trauma (Road Accident)</td></tr>
-      <tr><td style="padding:10px;"><strong>Units Required:</strong></td><td>3</td></tr>
-      <tr><td style="padding:10px;"><strong>Doctor:</strong></td><td>Dr. Sanjay Patel</td></tr>
-      <tr><td style="padding:10px;"><strong>Hospital:</strong></td><td>Apollo Hospital</td></tr>
-    </table>
-    <button onclick="closeModal()" style="background:#2196f3;color:white;padding:12px 25px;border:none;border-radius:8px;font-size:16px;">Close</button>
-  </div>
+<div class="card">
+
+<h2>Who Can Donate Blood?</h2>
+
+<ul>
+<li>Age between 18 – 60 years</li>
+<li>Minimum weight 50 kg</li>
+<li>Healthy and free from infections</li>
+<li>Minimum 90 days gap between donations</li>
+</ul>
+
 </div>
 
-<a href="/" style="background:#2196f3;color:white;padding:15px 30px;text-decoration:none;border-radius:10px;">← Dashboard</a>
+<div class="card">
+
+<h2>Blood Compatibility Chart</h2>
+
+<table>
+
+<tr>
+<th>Blood Group</th>
+<th>Can Donate To</th>
+</tr>
+
+<tr>
+<td>O-</td>
+<td>All Blood Groups</td>
+</tr>
+
+<tr>
+<td>O+</td>
+<td>O+, A+, B+, AB+</td>
+</tr>
+
+<tr>
+<td>A+</td>
+<td>A+, AB+</td>
+</tr>
+
+<tr>
+<td>B+</td>
+<td>B+, AB+</td>
+</tr>
+
+<tr>
+<td>AB+</td>
+<td>AB+ Only</td>
+</tr>
+
+</table>
+
 </div>
 
-<script>
-function showFullDetails() { document.getElementById('modal').style.display='block'; }
-function closeModal() { document.getElementById('modal').style.display='none'; }
-</script>
+<div class="card">
+
+<h2>Emergency Tips</h2>
+
+<ul>
+<li>Stay calm and contact nearby blood donors</li>
+<li>Always keep emergency hospital numbers</li>
+<li>Check blood compatibility before transfusion</li>
+</ul>
+
+</div>
+
+<center>
+
+<a href="/dashboard" class="btn">⬅ Back to Dashboard</a>
+
+</center>
+
+</div>
+
 </body>
 </html>
-
-
-

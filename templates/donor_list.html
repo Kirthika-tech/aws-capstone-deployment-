@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Donor List</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+background:linear-gradient(135deg,#ff4d4d,#660000);
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+/* CARD DESIGN */
+
+.container{
+width:900px;
+background:white;
+padding:30px;
+border-radius:20px;
+box-shadow:0 25px 50px rgba(0,0,0,0.4);
+transform:perspective(1000px) rotateX(2deg);
+}
+
+/* TITLE */
+
+h2{
+text-align:center;
+color:#b30000;
+margin-bottom:25px;
+font-size:28px;
+}
+
+/* TABLE */
+
+table{
+width:100%;
+border-collapse:collapse;
+border-radius:10px;
+overflow:hidden;
+}
+
+/* HEADER */
+
+th{
+background:linear-gradient(45deg,#cc0000,#800000);
+color:white;
+padding:14px;
+font-size:16px;
+letter-spacing:1px;
+}
+
+/* DATA */
+
+td{
+padding:12px;
+text-align:center;
+border-bottom:1px solid #eee;
+font-size:15px;
+}
+
+/* HOVER */
+
+tr{
+transition:0.3s;
+}
+
+tr:hover{
+background:#ffe6e6;
+transform:scale(1.01);
+box-shadow:0 5px 10px rgba(0,0,0,0.1);
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>🩸 Blood Donor List</h2>
+
+<table>
+
+<tr>
+<th>Name</th>
+<th>Email</th>
+<th>Phone</th>
+<th>Blood Group</th>
+</tr>
+
+{% for donor in donors %}
+
+<tr>
+<td>{{ donor.name }}</td>
+<td>{{ donor.email }}</td>
+<td>{{ donor.phone }}</td>
+<td>{{ donor.blood_group }}</td>
+</tr>
+
+{% endfor %}
+
+</table>
+
+</div>
+
+</body>
+</html>
